@@ -1,0 +1,15 @@
+plugins {
+id 'java'
+}
+
+version '1.0-gal-Snapshot'
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  runtime 'io.sentry:sentry-logback:5.7.3'
+}
+
