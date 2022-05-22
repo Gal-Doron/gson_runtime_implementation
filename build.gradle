@@ -11,5 +11,10 @@ repositories {
 
 dependencies {
   runtime 'io.sentry:sentry-logback:5.7.3'
+    constraints {
+    runtime implementation('com.google.code.gson:gson:2.8.9') {
+        because("io.sentry:sentry-logback:5.7.3 has gson v2.8.5 as a transitive dependency but that version of gson has a known vulnerability")
+    }
+  }
 }
 
